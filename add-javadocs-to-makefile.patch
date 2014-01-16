@@ -1,0 +1,18 @@
+--- makefile.sav	2010-05-05 11:57:46.000000000 +0300
++++ makefile	2010-05-05 12:04:37.504052246 +0300
+@@ -2,9 +2,14 @@
+ 
+ JAR =   jar
+ JAVAC = javac
++JAVADOC = javadoc
+ 
+-all:	yydebug.jar
++all:	yydebug.jar javadocs
+ 
+ yydebug.jar:
+ 	$(JAVAC) *.java -d .
+ 	$(JAR) cf yydebug.jar jay/yydebug/*.class
++
++javadocs:
++	mkdir javadocs
++	$(JAVADOC) -d ./javadocs *.java
