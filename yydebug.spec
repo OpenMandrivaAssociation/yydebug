@@ -13,6 +13,7 @@ Patch0:   clean-up-broken-makefile.patch
 Patch1:   add-javadocs-to-makefile.patch
 
 BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+BuildRequires:	make
 BuildRequires: java-devel
 BuildRequires:  jpackage-utils
 Requires: java
